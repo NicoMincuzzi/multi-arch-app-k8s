@@ -4,7 +4,7 @@ Simple SpringBoot web app, which is containerized by Docker and orchestrated by 
 - `kind: Service` : in order to communicate with other pods and external world
 - `kind: Ingress` : in **Minikube** it's used by the relative add-on
 
-##Installing Kubernetes
+## Installing Kubernetes
 
 ### Kubernetes Configuration
 Kubernetes can be installed using different cluster configurations. The major installation types are described below:
