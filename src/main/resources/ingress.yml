@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: dummy-app-ingress
+spec:
+  rules:
+    - host: dummyapp.com
+      http:
+        paths:
+        - backend:
+            serviceName: dummy-app-int-service
+            servicePort: 8080

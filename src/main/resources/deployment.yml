@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-app-deployment
+  labels:
+    app: dummy-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dummy-app
+  template:
+    metadata:
+      labels:
+        app: dummy-app
+    spec:
+      containers:
+        - name: springboot-k8s
+          image: nicomincuzzi/springboot-maven:1.0
+          ports:
+            - containerPort: 8080
