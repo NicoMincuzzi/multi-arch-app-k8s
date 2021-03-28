@@ -1,5 +1,5 @@
 # SpringBoot K8s
-Simple SpringBoot web app, which is containerized by Docker and orchestrated by K8s. In particular, the following K8s manifest kind has been defined:
+Simple SpringBoot web app, which is containerized by Docker and orchestrated by K8s. In particular, the following K8s manifests kind have been defined:
 - `kind: Deployment`
 - `kind: Service` : in order to communicate with other pods and external world
 - `kind: Ingress` : in **Minikube** it's used by the relative add-on
