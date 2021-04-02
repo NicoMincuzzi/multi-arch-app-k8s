@@ -1,5 +1,6 @@
 # SpringBoot K8s
 [![CI](https://github.com/NicoMincuzzi/springboot-k8s/actions/workflows/maven.yml/badge.svg)](https://github.com/NicoMincuzzi/springboot-k8s/actions/workflows/maven.yml)
+[![Docker Image CI](https://github.com/NicoMincuzzi/springboot-k8s/actions/workflows/docker-image.yml/badge.svg)](https://github.com/NicoMincuzzi/springboot-k8s/actions/workflows/docker-image.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/NicoMincuzzi/springboot-k8s)
 
 Simple SpringBoot web app, which is containerized by Docker and orchestrated by K8s. In particular, the following K8s manifests kind have been defined:
