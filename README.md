@@ -120,3 +120,10 @@ armv7l
 ```
 
 In the above example, `uname -m` returns `aarch64` and `armv7l` as expected, even when running the commands on a native macOS developer machine.
+
+
+## How to Contribute
+Make a pull request...
+
+## License
+Distributed under Apache-2.0 License, please see license file within the code for more details.
