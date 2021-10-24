@@ -37,18 +37,21 @@ There are a variety of installation tools allowing us to deploy single- or multi
 
 **Minikube** is the easiest and most preferred method to create an all-in-one Kubernetes setup locally. 
 
-In my project, I use **Minikube** as a single-node on my local machine and **MicroK8s** to create a Kubernetes cluster on Raspberry Pis. It has needed to build Docker image for arm architecture, as follows.
+---
 
 ## Multi-Architecture Docker
-Docker images can support multiple architectures, which means that a single image may contain variants for different architectures, and sometimes for different operating systems, such as Windows.
+Docker images can support **multiple architectures**
+- a single image may contain variants for *different architectures* and for *different operating systems*
 
-When running an image with multi-architecture support, `docker` will automatically select an image variant which matches your OS and architecture.
+When running an image with multi-architecture support, `docker` will automatically select an image variant which matches your OS and architecture
 
 Most of the official images on Docker Hub provide a variety of architectures. For example, the `busybox` image supports `amd64`, `arm32v5`, `arm32v6`, `arm32v7`, `arm64v8`, `i386`, `ppc64le`, and `s390x`. When running this image on an `x86_64` / `amd64` machine, the `x86_64` variant will be pulled and run.
-### Docker Buildx(Experimental)
-Docker is now making it easier than ever to develop containers on, and for Arm servers and devices. Using the standard Docker tooling and processes, you can start to build, push, pull, and run images seamlessly on different compute architectures. Note that you don’t have to make any changes to Dockerfiles or source code to start building for Arm.
 
-Docker introduces a new CLI command called buildx. You can use the `buildx` command on Docker Desktop for Mac and Windows to build multi-arch images, link them together with a manifest file, and push them all to a registry using a single command. With the included emulation, you can transparently build more than just native images. Buildx accomplishes this by adding new builder instances based on BuildKit, and leveraging Docker Desktop’s technology stack to run non-native binaries.
+### Docker Buildx(Experimental)
+Using the standard Docker tooling and processes, you can start to build, push, pull, and run images on different compute architectures
+- Note that you don’t have to make any changes to Dockerfiles or source code to start building for Arm.
+
+Docker introduces a new CLI command called `buildx`. You can use the `buildx` command on Docker Desktop for Mac and Windows to build multi-arch images, link them together with a manifest file, and push them all to a registry using a single command. With the included emulation, you can transparently build more than just native images. Buildx accomplishes this by adding new builder instances based on BuildKit, and leveraging Docker Desktop’s technology stack to run non-native binaries.
 
 If you are on Mac or Windows, you have nothing to worry about, `buildx` is shipped with Docker Desktop. If you are on Linux, you might need to install it by following the documentation here https://github.com/docker/buildx
 
